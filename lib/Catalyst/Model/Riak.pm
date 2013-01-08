@@ -3,7 +3,7 @@ BEGIN {
 	$Catalyst::Model::Riak::AUTHORITY = 'cpan:NLTBO';
 }
 BEGIN {
-	$Catalyst::Model::Riak::VERSION = '0.01';
+	$Catalyst::Model::Riak::VERSION = '0.02';
 }
 
 use Net::Riak;
@@ -294,7 +294,7 @@ Issue Tracker
 
 Theo Bot <nltbo@cpan.org> L<http://www.proxy.nl>
 
-=head COPYRIGHT AND LICENSE
+=head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2013 by Theo Bot
 

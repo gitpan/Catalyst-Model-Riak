@@ -3,7 +3,7 @@ BEGIN {
 	$Catalyst::Model::Riak::AUTHORITY = 'cpan:NLTBO';
 }
 BEGIN {
-	$Catalyst::Model::Riak::VERSION = '0.03';
+	$Catalyst::Model::Riak::VERSION = '0.04';
 }
 
 use Net::Riak;
@@ -74,7 +74,6 @@ sub _build_client {
 sub bucket {
 	my($self, $data) = @_;
 
-	ActiveCMDB->log->info($data);
 	if ( defined($data) ) {
 		$self->container($self->client->bucket($data));
 	}

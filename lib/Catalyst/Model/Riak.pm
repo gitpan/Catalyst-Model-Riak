@@ -3,7 +3,7 @@ BEGIN {
 	$Catalyst::Model::Riak::AUTHORITY = 'cpan:NLTBO';
 }
 BEGIN {
-	$Catalyst::Model::Riak::VERSION = '0.04';
+	$Catalyst::Model::Riak::VERSION = '0.07';
 }
 
 use Net::Riak;
@@ -137,7 +137,7 @@ sub update {
 	my($self, $data) = @_;
 	
 	if ( defined($data->{key}) ) {
-		my $object = $self->get($data->{key});
+		my $object = $self->get({ key => $data->{key} });
 
 		if ( defined($object) ) {
 			$object->data($data->{value});
